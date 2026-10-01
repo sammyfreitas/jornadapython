@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Power Up Pro • Demonstração Web</title>
+<style>
+:root{--bg:#081620;--card:#0d202c;--line:#244052;--text:#f5f7fb;--muted:#9fc2d8;--green:#08cfa7;--purple:#7c5cff;--red:#ff667a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top right,#172445,#081620 50%);color:var(--text);font:16px Arial,sans-serif}
+.wrap{max-width:1050px;margin:auto;padding:28px}.top{display:flex;justify-content:space-between;gap:20px;align-items:center}.tag{display:inline-block;padding:8px 12px;border-radius:999px;background:#102a3a;color:#d8f8ff;font-weight:700;font-size:12px}
+h1{font-size:clamp(30px,5vw,52px);margin:14px 0 8px}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:360px 1fr;gap:20px;margin-top:26px}
+.card{background:rgba(13,32,44,.92);border:1px solid var(--line);border-radius:20px;padding:22px}.field{margin:14px 0}.field label{display:block;margin-bottom:7px;color:var(--muted);font-size:14px}
+input,select{width:100%;padding:13px;border-radius:10px;border:1px solid #315268;background:#091923;color:white}
+button,.btn{border:0;border-radius:11px;padding:13px 17px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}.primary{background:var(--green);color:#041612}.secondary{background:#142b3a;color:white;border:1px solid #315268}
+.row{display:flex;gap:10px;flex-wrap:wrap}.error{color:#ff9baa;min-height:20px}.ok{color:#6cebcf}.progress{height:14px;border-radius:99px;background:#203746;overflow:hidden;margin:18px 0}.bar{height:100%;width:0;background:linear-gradient(90deg,var(--purple),var(--green));transition:.25s}
+.log{height:310px;overflow:auto;background:#07141d;border:1px solid #223e50;border-radius:13px;padding:15px;font:14px Consolas,monospace;white-space:pre-wrap;color:#c7dbe8}
+.stat{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:15px 0}.stat div{background:#102633;padding:12px;border-radius:12px}.stat b{display:block;font-size:22px}
+.notice{margin-top:20px;border-left:3px solid var(--purple);padding:13px 16px;background:#101e30;color:#bcd0e0;border-radius:9px}
+@media(max-width:780px){.grid{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body><main class="wrap">
+<div class="top"><div><span class="tag">DEMONSTRAÇÃO WEB • AULA 1</span><h1>Python Power Up Pro</h1><p class="muted">Simulação interativa da interface e do fluxo da automação. Funciona diretamente no GitHub Pages.</p></div><a class="btn secondary" href="../index.html">← Voltar</a></div>
+<div class="grid">
+<section class="card">
+<h2>Acesso</h2>
+<div class="field"><label>Usuário</label><input id="user" placeholder="admin ou user"></div>
+<div class="field"><label>Senha</label><input id="pass" type="password" placeholder="123456"></div>
+<button class="primary" id="login">Entrar</button><p id="loginMsg" class="error"></p>
+<div id="controls" hidden>
+<hr style="border-color:#244052;margin:22px 0">
+<h3>Automação</h3>
+<div class="field"><label>Base de dados</label><select id="base"><option>produtos_exemplo.csv • 8 registros</option><option>base_demonstracao.csv • 12 registros</option></select></div>
+<div class="field"><label>Modo</label><select id="mode"><option>Simulação segura</option><option>Prévia da automação</option></select></div>
+<div class="row"><button class="primary" id="start">▶ Iniciar</button><button class="secondary" id="stop">■ Parar</button></div>
+</div>
+</section>
+<section class="card"><h2>Execução</h2>
+<div class="stat"><div><span class="muted">Total</span><b id="total">0</b></div><div><span class="muted">Processados</span><b id="done">0</b></div><div><span class="muted">Status</span><b id="status">—</b></div></div>
+<div class="progress"><div class="bar" id="bar"></div></div><div class="log" id="log">Aguardando login...</div>
+</section></div>
+<div class="notice"><b>Importante:</b> esta é a demonstração web do projeto para o portfólio. Ela reproduz a experiência, autenticação, progresso e logs. A automação real com PyAutoGUI controla teclado e mouse e, por isso, precisa ser executada localmente no computador.</div>
+</main>
+<script>
+const $=id=>document.getElementById(id);let timer=null,stopped=false;
+$("login").onclick=()=>{const u=$("user").value.trim(),p=$("pass").value;
+ if((u==="admin"||u==="user")&&p==="123456"){$("loginMsg").textContent="✓ Acesso autorizado como "+u;$("loginMsg").className="ok";$("controls").hidden=false;$("log").textContent="["+new Date().toLocaleTimeString()+"] Login autorizado: "+u+"\nAguardando início da automação...";}
+ else{$("loginMsg").textContent="Usuário ou senha inválidos. Use admin ou user / 123456";$("loginMsg").className="error";}};
+$("start").onclick=()=>{clearInterval(timer);stopped=false;let n=$("base").selectedIndex===0?8:12,i=0;$("total").textContent=n;$("done").textContent=0;$("status").textContent="RUN";$("bar").style.width="0%";
+ $("log").textContent+="\n\n[START] Validando colunas...\n[OK] Base validada\n[OK] Sistema aberto\n[OK] Login realizado\n";
+ timer=setInterval(()=>{if(stopped||i>=n){clearInterval(timer);if(!stopped){$("status").textContent="OK";$("log").textContent+="[FIM] Cadastro concluído com sucesso.\n";}return;}i++;$("done").textContent=i;$("bar").style.width=(i/n*100)+"%";$("log").textContent+="[RUN] Produto "+i+"/"+n+" cadastrado • COD-"+String(1000+i)+"\n";$("log").scrollTop=$("log").scrollHeight;},500)};
+$("stop").onclick=()=>{stopped=true;clearInterval(timer);$("status").textContent="STOP";$("log").textContent+="[STOP] Execução interrompida pelo usuário.\n";};
+</script></body></html>
