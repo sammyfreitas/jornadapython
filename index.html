@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jornada Python Impressionador — projetos, estudos e evoluções desenvolvidos por Anthony Freitas.">
+  <title>Jornada Python Impressionador | Anthony Freitas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header" id="topo">
+    <div class="container nav-wrap">
+      <a class="brand" href="#inicio" aria-label="Ir para o início">
+        <img src="assets/img/logo-hashtag.png" alt="Logo Hashtag">
+        <span><strong>Jornada Python</strong><small>por Anthony Freitas</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+
+      <nav class="nav" id="nav">
+        <a href="#inicio">Início</a>
+        <a href="#jornada">Jornada</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#tecnologias">Tecnologias</a>
+        <a href="#certificacao">Certificação</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+<div class="top-socials" aria-label="Redes sociais de Anthony Freitas">
+        <a href="https://github.com/sammyfreitas/" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.3 11.3 0 0 0-3.6 22c.6.1.8-.2.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.4-1.3-5.4-5.6 0-1.2.4-2.2 1.2-3-.1-.3-.5-1.5.1-3 0 0 1-.3 3.1 1.2a10.8 10.8 0 0 1 5.6 0C16.8 5.4 17.8 5.7 17.8 5.7c.6 1.5.2 2.7.1 3 .8.8 1.2 1.8 1.2 3 0 4.3-2.8 5.3-5.4 5.6.4.4.8 1.1.8 2.1v3.1c0 .4.2.7.8.6A11.3 11.3 0 0 0 12 .7Z"/></svg></a>
+        <a href="https://www.linkedin.com/in/tony-s-freitas/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.3 7.8H1.7V22h3.6V7.8ZM3.5 2A2.1 2.1 0 1 0 3.5 6.2 2.1 2.1 0 0 0 3.5 2ZM22 13.8c0-4.3-2.3-6.3-5.4-6.3-2.5 0-3.6 1.4-4.2 2.3v-2H8.8V22h3.6v-7c0-1.8.4-3.6 2.7-3.6 2.3 0 2.3 2.1 2.3 3.7V22H22v-8.2Z"/></svg></a>
+        <a href="https://www.instagram.com/anthony_tijuduke/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.2 2h9.6A5.2 5.2 0 0 1 22 7.2v9.6a5.2 5.2 0 0 1-5.2 5.2H7.2A5.2 5.2 0 0 1 2 16.8V7.2A5.2 5.2 0 0 1 7.2 2Zm-.2 2A3 3 0 0 0 4 7v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm10.3 1.5a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM12 7.1a4.9 4.9 0 1 1 0 9.8 4.9 4.9 0 0 1 0-9.8Zm0 2a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8Z"/></svg></a>
+        <a href="https://sammyfreitas.github.io/portfolio/" target="_blank" rel="noopener" aria-label="Portfólio" title="Portfólio"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6l1 3h4a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l1-3Zm1.5 2-.4 1h3.8l-.4-1h-3ZM4 10v9h16v-9h-5v2H9v-2H4Zm7 0h2V8h-2v2Z"/></svg></a>
+        <a href="https://wa.me/5521986140005" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 2 17.7L.5 23.5l5.9-1.5A11.8 11.8 0 0 0 20.5 3.5ZM12 21a9.7 9.7 0 0 1-4.9-1.3l-.4-.2-3.5.9.9-3.4-.2-.4A9.7 9.7 0 1 1 12 21Zm5.3-7.3c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.6l-.9-2.1c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.9 5.2 2.2.9 3.1 1 4.2.8.7-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3-.1-.1-.3-.2-.6-.3Z"/></svg></a>
+      </div>
+
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema" title="Alternar tema">☀</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero section" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">28 SET — 01 OUT • 2026</span>
+          <h1>Sempre aprendendo.<br><span>Sempre criando.</span></h1>
+          <p class="lead">
+            Experiência não encerra o aprendizado. Nesta jornada, revisito conceitos,
+            experimento novas possibilidades e transformo cada aula em uma oportunidade
+            de construir, melhorar e ir além.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projetos">Explorar projetos</a>
+            <a class="btn btn-secondary" href="#jornada">Conhecer a jornada</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="logo-orbit">
+            <div class="orbit orbit-1"></div>
+            <div class="orbit orbit-2"></div>
+            <img src="assets/img/logo-hashtag.png" alt="Hashtag Treinamentos">
+          </div>
+          <div class="progress-card">
+            <div>
+              <span>Jornada</span>
+              <strong>3 / 4 aulas</strong>
+            </div>
+            <div class="progress"><span style="width:75%"></span></div>
+            <small>Aprender → Praticar → Evoluir</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="jornada">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">FORMAÇÃO CONTINUADA</span>
+          <h2>Por que registrar esta jornada?</h2>
+          <p>
+            Mesmo já atuando com desenvolvimento e ensino de tecnologia, continuar estudando
+            faz parte do processo. Aqui, o objetivo não é apenas reproduzir exercícios:
+            é documentar o aprendizado, aplicar o conteúdo e evoluir cada projeto com identidade
+            e soluções próprias.
+          </p>
+        </div>
+
+        <div class="steps reveal">
+          <article><span>01</span><h3>Aprender</h3><p>Revisar conceitos e observar novas abordagens.</p></article>
+          <article><span>02</span><h3>Praticar</h3><p>Construir a proposta apresentada em cada aula.</p></article>
+          <article><span>03</span><h3>Evoluir</h3><p>Adicionar recursos, interface e decisões próprias.</p></article>
+          <article><span>04</span><h3>Compartilhar</h3><p>Documentar o processo e transformar estudo em portfólio.</p></article>
+        </div>
+
+        <div class="timeline reveal" aria-label="Cronograma da jornada">
+          <div class="timeline-item done"><b>28 SET</b><span>Aula 1</span><small>Automação</small></div>
+          <div class="timeline-item done"><b>29 SET</b><span>Aula 2</span><small>Dados</small></div>
+          <div class="timeline-item done"><b>30 SET</b><span>Aula 3</span><small>IA</small></div>
+          <div class="timeline-item active"><b>01 OUT</b><span>Aula 4</span><small>Sistema Web</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projetos">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">4 AULAS • 4 DESAFIOS</span>
+          <h2>Do conteúdo original à minha evolução</h2>
+          <p>Cada projeto preserva a referência da aula e separa claramente o material da formação, a implementação básica e a versão expandida.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card reveal">
+            <div class="card-top"><span class="number">01</span><span class="status done">Concluída</span></div>
+            <div class="icon">⚙️</div>
+            <p class="kicker">AUTOMAÇÃO DE TAREFAS E BOTS</p>
+            <h3>Automação com Python</h3>
+            <p>RPA e automação de processos repetitivos com Python e PyAutoGUI.</p>
+            <div class="tags"><span>Python</span><span>PyAutoGUI</span><span>RPA</span></div>
+            <div class="card-actions">
+              <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=zbCFQY1a1M0">▶ Aula original</a>
+              <a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1ERaraa4ZeXWFWo4K8oNJi4kY6aGZYdzw">↗ Materiais</a>
+              <a href="projetos/aula1/index.html">⌁ Projeto básico</a>
+              <a class="accent" href="projetos/aula1/index.html#melhorado">✦ Versão melhorada</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="card-top"><span class="number">02</span><span class="status done">Concluída</span></div>
+            <div class="icon">📊</div>
+            <p class="kicker">ANÁLISE DE DADOS</p>
+            <h3>Python Insights</h3>
+            <p>Tratamento e análise de dados para investigar padrões de cancelamento de clientes.</p>
+            <div class="tags"><span>Python</span><span>Pandas</span><span>Plotly</span></div>
+            <div class="card-actions">
+              <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=6ttQziuwrAA">▶ Aula original</a>
+              <a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1uDesZePdkhiraJmiyeZ-w5tfc8XsNYFZ">↗ Materiais</a>
+              <a class="disabled" href="#" aria-disabled="true">⌁ Projeto básico</a>
+              <a class="accent disabled" href="#" aria-disabled="true">✦ Versão melhorada</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="card-top"><span class="number">03</span><span class="status done">Concluída</span></div>
+            <div class="icon">🤖</div>
+            <p class="kicker">CHATBOT COM IA EM TEMPO REAL</p>
+            <h3>Inteligência Artificial</h3>
+            <p>Chatbot com IA em tempo real. O pacote de materiais foi disponibilizado com o nome “Machine Learning”, mas o projeto trabalhado internamente corresponde ao chatbot.</p>
+            <div class="tags"><span>Python</span><span>IA</span><span>Chatbot</span></div>
+            <div class="card-actions">
+              <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=1gSAAcKyVWs">▶ Aula original</a>
+              <a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1FbDqVq4XLvU85VBlVIMJ73p9oOu6u2-J">↗ Materiais</a>
+              <a class="disabled" href="#" aria-disabled="true">⌁ Projeto básico</a>
+              <a class="accent disabled" href="#" aria-disabled="true">✦ Versão melhorada</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="card-top"><span class="number">04</span><span class="status next">Próxima aula</span></div>
+            <div class="icon">🛒</div>
+            <p class="kicker">SISTEMA DE VENDAS E GESTÃO ONLINE</p>
+            <h3>Sistema Web</h3>
+            <p>Área reservada para o quarto projeto e para a versão expandida após a aula.</p>
+            <div class="tags"><span>Python</span><span>Web</span><span>Gestão</span></div>
+            <div class="card-actions">
+              <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=yCjtOGFi59g">▶ Aula original</a>
+              <a target="_blank" rel="noopener" href="https://drive.google.com/drive/folders/1kO1a2SnvOJjBUGcApPPZQovANJ4myzr0">↗ Materiais</a>
+              <a class="disabled" href="#" aria-disabled="true">⌁ Projeto básico</a>
+              <a class="accent disabled" href="#" aria-disabled="true">✦ Versão melhorada</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="credits reveal">
+          <strong>Créditos da formação</strong>
+          <p>
+            Projetos de estudo desenvolvidos durante a Jornada Python da Hashtag Treinamentos.
+            Os links de “Aula original” e “Materiais” direcionam para as fontes disponibilizadas pela formação.
+            As implementações e evoluções apresentadas neste portfólio são organizadas e desenvolvidas por Anthony Freitas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="tecnologias">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">STACK DA JORNADA</span>
+          <h2>Tecnologias em prática</h2>
+        </div>
+        <div class="tech-grid reveal">
+          <span>Python</span><span>PyAutoGUI</span><span>Pandas</span><span>Plotly</span>
+          <span>Jupyter</span><span>VS Code</span><span>Inteligência Artificial</span><span>Web</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section certificate-section" id="certificacao">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="eyebrow">CONCLUSÃO DA JORNADA</span>
+          <h2>Certificação</h2>
+          <p>Espaço reservado para registrar a conclusão da Jornada Python Impressionador.</p>
+        </div>
+
+        <div class="certificate-placeholder reveal">
+          <div class="certificate-icon">◇</div>
+          <h3>Certificado em breve</h3>
+          <p>Ao concluir a jornada, o certificado poderá ser exibido aqui junto ao link de validação.</p>
+          <div class="certificate-actions">
+            <button class="btn btn-secondary" disabled>Visualizar certificado</button>
+            <a class="btn btn-ghost" target="_blank" rel="noopener" href="https://eventoshashtag.herokuapp.com/certificados/jornada-python">Validar certificado ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/logo-hashtag.png" alt="">
+        <div><strong>Jornada Python Impressionador</strong><span>28/09/26 a 01/10/26</span></div>
+      </div>
+      <p>Estudo contínuo • Desenvolvimento • Tecnologia • Educação</p>
+      <div class="footer-social">
+        <a href="https://github.com/sammyfreitas/" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/tony-s-freitas/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.instagram.com/anthony_tijuduke/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://sammyfreitas.github.io/portfolio/" target="_blank" rel="noopener">Portfólio</a>
+        <a href="https://wa.me/5521986140005" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 • Desenvolvido por <strong>Anthony Freitas</strong></span>
+      <a href="#topo">Voltar ao topo ↑</a>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
